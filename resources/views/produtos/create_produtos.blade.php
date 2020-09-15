@@ -36,7 +36,8 @@ Novo produto
 
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+            <a href="/" class=" btn btn-outline-primary ">Voltar</a>
         </div>
     </div>
 </form>

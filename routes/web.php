@@ -31,3 +31,15 @@ Route::post('/clientes/criar', 'ClientesController@store')->name('store');
 Route::get('/clientes/alterar/{id}', 'ClientesController@editar')->name('editar');
 Route::post('/clientes/alterar/{id}', 'ClientesController@update')->name('update');
 Route::delete('/clientes/{id}', 'ClientesController@destroy')->name('destroy');
+
+Route::get('/produtopedidos', 'PedidoController@index')->name('indexprodutopedidos');
+Route::get('/produtopedidos/criar', 'PedidoController@create')->name('pedidocontrollercreate');
+Route::post('/produtopedidos/criar', 'PedidoController@store')->name('pedidocontrollerstore');
+Route::delete('/produtopedidos/{id}', 'PedidoController@destroy')->name('pedidocontrollerdestroy');
+
+
+
+Route::get('/pedidos', 'PedidosProdutosController@index')->name('pedidosindex');
+Route::get('/pedidos/{id}', 'PedidosProdutosController@pedidocreate')->name('pedidocreate');
+Route::post('/pedidos/{id}', 'PedidosProdutosController@store')->name('confirmarpedidosprodutosstore');
+Route::delete('/pedidos/{id}', 'PedidosProdutosController@destroy')->name('pedidosprodutosdestroy');

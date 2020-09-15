@@ -6,6 +6,7 @@ Novo Cliente
 
 @section('conteudo')
 
+
 <form method="POST">
     @csrf
 <div class="form-group row">
@@ -26,11 +27,15 @@ Novo Cliente
       <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Senha" required="true">
     </div>
   </div>
+  
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Entrar</button>
+      <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+      <a href="/clientes" class=" btn btn-outline-primary ">Voltar</a>
     </div>
+    
   </div>
+  
 </form>
 
 

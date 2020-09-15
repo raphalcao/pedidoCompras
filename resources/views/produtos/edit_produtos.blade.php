@@ -2,7 +2,7 @@
 
 @section('cabecalho')
 
-Editando Cliente 
+Editar Produtos
 @endsection
 
 @section('conteudo')
