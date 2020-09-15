@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-Criando clientes
+Novo Cliente
 @endsection
 
 @section('conteudo')

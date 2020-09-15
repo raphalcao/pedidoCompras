@@ -22,6 +22,8 @@ Lista de Produtos
         <th scope="col">Descrição</th>
         <th scope="col">Valor</th>
         <th scope="col">Ativo</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
       </tr>
     </thead>
 
@@ -39,17 +41,18 @@ Lista de Produtos
               @method('DELETE')
               <button class="btn btn-danger">Excluir</button>
             </form>
-            <a href="/produtos/alterar/{{$dado->id}}" class="btn btn-primary">Alterar</i>
             </a>
           </td>
+          <td><a href="/produtos/alterar/{{$dado->id}}" class="btn btn-primary mb-2">Alterar</i></td>
+          <td><a href="#" class="btn btn-primary mb-2">Adicionar na lista</i></td>
         </tr>
       <?php endforeach; ?>
 
     </tbody>
 </ul>
 
-<a href="/produtos/criar" class=" btn btn-dark mb-2">Adicionar Produto</a>
-<a href="/clientes" class=" btn btn-dark mb-2">Ir para clientes</a>
+<a href="/produtos/criar" class="btn btn-outline-primary mb-2">Adicionar Produto</a>
+<a href="/clientes" class="btn btn-outline-primary mb-2">Ir para clientes</a>
 
 
 @endsection

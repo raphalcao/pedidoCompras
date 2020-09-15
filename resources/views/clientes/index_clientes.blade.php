@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-Cadastro de clientes
+Lista de Clientes
 @endsection
 
 @section('conteudo')
@@ -20,7 +20,8 @@ Cadastro de clientes
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
-        <th scope="col">Botão</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
       </tr>
     </thead>
 
@@ -30,6 +31,7 @@ Cadastro de clientes
           <th scope="row">{{$dado->id}}</th>
           <td>{{$dado->name}}</td>
           <td>{{$dado->email}}</td>
+          <td><a href="/clientes/alterar/{{$dado->id}}" class="btn btn-primary">Alterar</a></td>
           <td>            
             <form method="POST" action="/clientes/{{$dado->id}}" onsubmit="return confirm('Deseja excluir {{addslashes($dado->name)}}?')">
             
@@ -37,9 +39,6 @@ Cadastro de clientes
               @method('DELETE')
               <button class="btn btn-danger">Excluir</button>
             </form>
-            <a href="/clientes/alterar/{{$dado->id}}" class="btn btn-primary">
-              Alterar</i>
-            </a>
           </td>
         </tr>
       <?php endforeach; ?>
@@ -47,7 +46,8 @@ Cadastro de clientes
     </tbody>
 </ul>
 
-<a href="/clientes/criar" class=" btn btn-dark mb-2">Adicionar Cliente</a>
+<a href="/clientes/criar" class=" btn btn-outline-primary mb-2">Novo Cliente</a>
+<a href="/" class=" btn btn-outline-primary mb-2">Ir para Produtos</a>
 
 
 @endsection
