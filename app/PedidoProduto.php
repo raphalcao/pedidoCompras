@@ -9,6 +9,7 @@ class PedidoProduto extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'id',
         'pedido_id',
         'produto_id',
         'status',

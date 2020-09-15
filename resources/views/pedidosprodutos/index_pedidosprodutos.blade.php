@@ -27,7 +27,7 @@ Lista de Pedidos de Clientes
           <td></td>
           <td>{{$dado->status}}</td>
           <td>            
-            <form method="POST" action="/produtopedidos/{{$dado->id}}" onsubmit="return confirm('Deseja excluir {{addslashes($dado->name)}}?')">
+            <form method="POST" action="/produtopedidos/{{$dado->id}}" onsubmit="return confirm('Deseja excluir ID Pedido {{addslashes($dado->id)}}?')">
             
               @csrf
               @method('DELETE')

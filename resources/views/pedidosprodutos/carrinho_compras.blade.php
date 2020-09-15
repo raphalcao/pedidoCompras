@@ -31,7 +31,7 @@ Carrinho de Compras
                     <td>{{$dado->status}}</td>
                     <td></td>
                     <td>
-                        <form method="POST" action="/pedidos/{{$dado->user_id}}" onsubmit="return confirm('Deseja excluir {{addslashes($dado->user_id)}}?')">
+                        <form method="POST" action="/pedidos/{{$dado->id}}" onsubmit="return confirm('Deseja excluir {{addslashes($dado->id)}}?')">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger">Excluir</button>

@@ -43,7 +43,7 @@ class PedidoController extends Controller
     {
         $pedido = Pedido::destroy($request->id);
 
-        return redirect()->route('pedidosindex');
+        return redirect()->route('indexprodutopedidos');
     }
 
 }

@@ -36,10 +36,10 @@ class PedidosProdutosController extends Controller
 
     }
 
-    public function destroy(Request $request) 
-    {        
-
-        Pedido::destroy($request->user_id);
+    public function destroy(int $id) 
+    {   
+        
+        Pedido::destroy($id);        
         return redirect()->route('pedidosindex');
 
     }
