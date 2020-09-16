@@ -13,7 +13,6 @@ Implementando  API Rest JSON
 
 Para a utilização da API, é necessário executar as ações através do Postman.
 
-Para executar o consumo da API, deve-se atentar ao padrão abaixo criado: 
 
 API de Produtos
 - GET: http://localhost:8000/api/produtos/
