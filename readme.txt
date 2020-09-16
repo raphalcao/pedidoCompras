@@ -9,12 +9,13 @@ Após a criação do banco, efetue as migrations, utilizando o comando: php arti
 Todas as rotas deste projeto estão disponíveis no diretório routes/web.php.
 
 
-Implementando  API de Produtos
+Implementando  API Rest JSON
 
 Para a utilização da API, é necessário executar as ações através do Postman.
 
-Para executar o consumo da API, os links de utilização são: 
+Para executar o consumo da API, deve-se atentar ao padrão abaixo criado: 
 
+API de Produtos
 - GET: http://localhost:8000/api/produtos/
 
    Exemplo de resposta em GET: 
@@ -64,4 +65,127 @@ Para executar o consumo da API, os links de utilização são:
 
 
 - DELETE: http://localhost:8000/api/produtos/{id}
+
+
+API de Pedidos
+
+GET: http://localhost:8000/api/pedidos
+    Resposta de JSON:
+    {
+        "id": 1,
+        "user_id": 1,
+        "status": "RE",
+        "created_at": null,
+        "updated_at": null
+    },
+
+
+GET: http://localhost:8000/api/pedidos/{id}
+    Resposta de JSON:
+    {
+        "id": 1,
+        "user_id": 1,
+        "status": "RE",
+        "created_at": null,
+        "updated_at": null
+    },
+
+POST: http://localhost:8000/api/pedidos
+    JSON utilizado no post:
+    {
+        "user_id": 1,
+        "status": "RE"
+    },
+PUT: http://localhost:8000/api/pedidos/{id}
+    JSON utilizado no PUT: 
+    {
+        "user_id": 1,
+        "status": "RE"
+    },
+
+DELETE: http://localhost:8000/api/pedidos/{id}
+
+
+API de PedidosProdutos
+
+GET: http://localhost:8000/api/pedidosprodutos
+     Resposta de JSON:
+    {
+        "id": 1,
+        "pedido_id": 5,
+        "produto_id": 1,
+        "status": "RE",
+        "valor": "380.01",
+        "created_at": null,
+        "updated_at": null
+    },
+GET: http://localhost:8000/api/pedidosprodutos/{id}
+    Resposta de JSON:
+    {
+        "id": 1,
+        "pedido_id": 5,
+        "produto_id": 1,
+        "status": "RE",
+        "valor": "380.01",
+        "created_at": null,
+        "updated_at": null
+    },
+
+
+POST: http://localhost:8000/api/pedidosprodutos
+    Entrada de JSON:
+    {
+        "pedido_id": 2,
+        "produto_id": 1,
+        "status": "RE",
+        "valor": "380.15"        
+    },
+PUT: http://localhost:8000/api/pedidosprodutos/{id}
+    Entrada de JSON:
+    {
+        "pedido_id": 1,
+        "produto_id": 2,
+        "status": "RE",
+        "valor": "600.15"        
+    },
+
+DELETE: http://localhost:8000/api/pedidosprodutos/{id}
+
+CRUD Users
+
+GET: http://localhost:8000/api/users
+    Resposta JSON:
+    {
+        "id": 1,
+        "name": "Jose Silva",
+        "email": "jose@gmail.com",
+        "email_verified_at": null,
+        "created_at": null,
+        "updated_at": null
+    }
+
+GET: http://localhost:8000/api/users/{id}
+    Resposta JSON:
+    {
+        "id": 1,
+        "name": "Jose Silva",
+        "email": "jose@gmail.com",
+        "email_verified_at": null,
+        "created_at": null,
+        "updated_at": null
+    }
+POST: http://localhost:8000/api/users
+    Entrada JSON:
+    {
+        "name": "Josue Silva",
+        "email": "josue@gmail.com",
+        "password": 123456
+    }
+PUT: http://localhost:8000/api/users/{id}
+    Entrada JSON:
+    {
+        "name": "Fernando Silva",
+        "email": "josue@gmail.com"
+    }
+DELETE: http://localhost:8000/api/users/{id}
  
