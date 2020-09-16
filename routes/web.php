@@ -43,3 +43,5 @@ Route::get('/pedidos', 'PedidosProdutosController@index')->name('pedidosindex');
 Route::get('/pedidos/{id}', 'PedidosProdutosController@pedidocreate')->name('pedidocreate');
 Route::post('/pedidos/{id}', 'PedidosProdutosController@store')->name('confirmarpedidosprodutosstore');
 Route::delete('/pedidos/{id}', 'PedidosProdutosController@destroy')->name('pedidosprodutosdestroy');
+
+
